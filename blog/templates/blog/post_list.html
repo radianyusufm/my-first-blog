@@ -12,7 +12,8 @@
 
             <p>{{ post.text|linebreaksbr }}</p>
 
+            <a href="{% url 'post_detail' pk=post.pk %}">Comment {{ post.approve_comments.count }}</a>
         </article>
     {% endfor %}
-{% endblock %}
+{% endblock content %}
             
